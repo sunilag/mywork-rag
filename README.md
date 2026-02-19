@@ -247,4 +247,24 @@ Unit tests and integration tests
 Streaming responses
 
 
+# Evaluation
+
+To validate retrieval quality and grounding behavior, created a small evaluation set of backend-oriented questions (eval/questions.yaml).
+
+These questions target key architectural areas of the codebase, such as App initialization, Authentication, Dependency injection, CRUD logic, Database session handling,Startup lifecycle
+
+# Running Evaluation
+
+python -m app.cli eval eval/questions.yaml
+
+This executes retrieval with grounded answer generation for each question.
+
+# Limitations
+
+Evaluation is qualitative (manual review), not metric-driven.
+
+No automated scoring of citation correctness yet.
+
+Hybrid search  could further improve precision.
+
 
